@@ -1,0 +1,348 @@
+<!DOCTYPE HTML>
+<html> 
+<head>
+<meta charset="UTF-8">
+<title>About Us</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" crossorigin="anonymous">
+<script>
+	window.onload=function(){
+	document.getElementById('loader').style.display="none";
+	document.getElementById('content').style.display="block";
+	};
+</script>
+<style type="text/css">
+	
+	@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+	margin: 0;
+	padding: 0;
+}
+.wrapper{
+	width: 1170px; 
+	margin:auto;
+}
+body hr{
+	width: 100%;
+	height: 100vh;
+	align-items: center;
+	background: #f5f5f5;
+	font-family: 'Barlow', sans-serif;
+}
+header{
+	background: url("images/2.jpeg");
+	height: 100vh;
+	-webkit-background-size:cover;
+	background-position: center center;
+	position:relative;
+}
+.nav-area{
+	float: right;
+	list-style: none;
+	 margin-top: 30px;
+}
+.nav-area li{
+	display: inline-block;
+}
+.nav-area li a{
+	color: #97ed0c;
+	text-decoration: none;
+	padding: 5px 20px;
+	font-display:poppins;
+	font-size: 14px;
+}
+.nav-area li a:hover{
+	background: #97ed0c;
+	color: #333;
+}
+.logo img{
+	width: 120px;
+	float: left;
+	height: auto;
+	filter: drop-shadow(-3px -3px 2px rgba(225,225,225,0.3))
+			drop-shadow(5px 5px 5px rgba(0,0,0,0.2))
+			drop-shadow(15px 15px 15px rgba(0,0,0,0.2));
+}
+.welcome-text{
+	position: absolute;
+	width: 600px;
+	height: 300px;
+	margin: 20% 30%;
+	text-align: center;
+}
+h1
+{
+	position: relative;
+	margin: 0;
+	color: #fcfafa;
+	font-size: 4em;
+	font-weight: 900;
+	overflow: hidden;
+}
+h1 span
+{
+	color: #ff1a00;
+}
+.jumbotron{
+	color: #ded0c5;
+	font-size: 17px;
+}
+h3{
+	color: #02fa7a;
+	font-size: 30px;
+	text-align: center;
+}
+.client-wrap{
+	width: 90%;
+	height: auto;
+	text-align: center;
+}
+.client-wrap h2
+{
+	font-size: 60px;
+	color: #fcfafa;
+}
+.client-wrap hr
+{
+	width: 15%;
+	height: 5px;
+	border: none;
+	background: #26ccca;
+	margin: auto;
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+.client-in{
+	width: 100%;
+	height: auto;
+}
+.client-in ul li
+{
+	list-style: none;
+	display: inline-block;
+	width: 150px;
+	height: 100px;
+	position: relative;
+	overflow: hidden;
+	cursor: pointer;
+	transition: .5s;
+	margin: 15px;
+}
+.client-in ul li img
+{
+	width: 100%;
+	height: 100%;
+}
+.client-in ul li img:nth-child(1)
+{
+	transform: translateY(0);
+	transition: .5s;
+} 
+.client-in ul li img:nth-child(2)
+{
+	transform: translateY(0);
+	transition: .5s;
+}
+/* Hover-Section */
+
+.client-in ul li:hover img:nth-child(1)
+{
+	transform: translateY(-100%);
+	transition: .5s;
+}
+.client-in ul li:hover img:nth-child(2)
+{
+	transform: translateY(-100%);
+	transition: .5s;
+}
+.socialMedia{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	transition: 0.5s;
+}
+.sci{
+	position: relative ;
+	display: flex;
+}
+.sci li{
+	list-style: none;
+}
+.sci li::before
+{
+	content: attr(data-text);
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,calc(-50% + 120px));
+	font-size: 14vw;
+	pointer-events: none;
+	font-weight: 700;
+	transition: 0.5s;
+	opacity: 0;
+}
+.sci li:hover::before
+{
+	opacity: 0.1;
+	transform: translate(-50%,calc(-50% + 150px));
+}
+.sci li a{
+	position: relative;
+	display: inline-flex;
+	width: 120px;
+	height: 120px;
+	background: #ccc;
+	justify-content: center;
+	align-items: center;
+	color: #333;
+	border-radius: 10px;
+	text-decoration: none;
+	margin: 20px;
+	font-size: 4em;
+	transform-style: preserve-3d;
+	perspective: 500px;
+	box-shadow: 0 25px 35px rbga(0,0,0,0.1);
+	transition: background 0.25s;
+}
+.js-tilt-glare
+{
+	border-radius: 10px;
+}
+.sci li a:hover.facebook
+{
+	background: #1877f2;
+}
+.sci li a:hover.youtube
+{
+	background: #ff0000;
+}
+.sci li a:hover.twitter
+{
+	background: #08efff;
+}
+.sci li a:hover.instagram
+{
+	background: linear-gradient(45deg, #405DE6, #5851DB, #833AB4, #C13584, #C13584, #E1306C, #FD1D1D);
+}
+.sci li a:hover.whatsapp
+{
+	background: #52eb34;
+}
+.sci li a .fa{
+	transition: 0.25s;
+	pointer-events: none;
+}
+.sci li a:hover .fa
+{
+	color: #fff;
+	transform: scale(1.75) translateZ(50px);
+}
+.copyrightText
+{
+	width: auto;
+	background: #181818;
+	padding: 8px 100px;
+	text-align: center;
+	color: #999;
+}
+	.copyrightText{
+		padding: 8px 40px;
+	}
+#loader{
+	position: absolute;
+	margin: auto;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	width: 500px;
+	height: 400px;
+	}
+#loader img{
+	width: 500px;
+	}
+#content{
+	display: none;
+	}
+</style>
+</head>
+<body>
+	<div id="loader">
+		<img src="images/load3.gif">
+</div>
+<div id="content">
+	<header>
+	<div class="wrapper">
+	<div class="logo"><a href="adminlogin.php">
+	<img src="images/pere.png" alt="This is a logo">
+	</a></div>
+	<ul class="nav-area">
+		<li><a href="index.php">Home</a></li>
+		<li><a href="aboutus.html">About</a></li>
+		<li><a href="brand.php">Brands</a></li>
+		<li><a href="contact.php">Contact Us</a></li>
+		<li><a href="login.php">Login in</a></li>
+		<li><a href="registration.php">Sign up</a></li>
+		</ul>
+	</div>
+	<div class="welcome-text">
+	<h3>About Us</h3>
+				<p style="background-color: #e6eef0; color: black; padding: 10px; opacity: 70%;" class="jumbotron"> 
+					At Peregrine Autombile, we believe that our relationship doesn’t end with getting you a new car. Its just the beginning of a long relationship which will need constant support and quality experience. Peregrine Automobile is Bangalore’s largest  car dealership serving customers throughout city from its 18 locations, providing a comfortable and a superior experience. 
+
+					Peregrine Autombile has been recognized on a national level through the 10 platinum awards in last 15 years. Only dealership in Karnataka to achieve this feat. 
+
+					Run by a dedicated team of professionals, highly competent with profound industry knowledge, backed with 300 strong MSIL trained technicians, 140 Bronze masters, 110 service advisors/consultants, 75 technical advisors, we offer professional services and optimum customer satisfaction to over 15,000 customers every month.
+
+					We invite you to experience the truly integrated car buying service Peregrine Automobile has to offer through the largest car network in Bengaluru.
+				</p>
+	</div>
+	</header>
+	<section class="socialMedia">
+		<ul class="sci">
+			<li data-text="Facebook" data-color="#0f8bff">
+				<a href="https://www.facebook.com/peregrineauto" class="facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+			</li>
+			<li data-text="Youtube" data-color="#de0202">
+				<a href="#" class="youtube"><i class="fa fa-youtube" aria-hidden="true"></i></a>
+			</li>
+			<li data-text="Twitter" data-color="#00d0e3">
+				<a href="https://twitter.com/PeregrineAutom1" class="twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+			</li>
+			<li data-text="Instagram" data-color="#f51b88">
+				<a href="https://www.instagram.com/peregrine_auto/" class="instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+			</li>
+			<li data-text="Whatsapp" data-color="#00cc00">
+				<a href="#" class="whatsapp"><i class="fa fa-whatsapp" aria-hidden="true"></i></a>
+			</li>
+		</ul>
+	</section>
+	<script src="vanilla-tilt.min.js"></script>
+	<script>
+
+		VanillaTilt.init(document.querySelectorAll(".sci li a"), {
+		max: 25,
+		speed: 400,
+		glare: true,
+		"max-glare": 1,
+		});
+
+		let list = document.querySelectorAll('.sci li');
+		let bg = document.querySelector('.socialMedia');
+		list.forEach(elements => {
+			elements.addEventListener('mouseenter',function(event){
+				let color = event.target.getAttribute('data-color');
+				bg.style.backgroundColor = color;
+			})
+			elements.addEventListener('mouseleave',function(event){
+				bg.style.backgroundColor = '#fff';
+			})
+		})
+	</script>
+	<div class="copyrightText">
+			<p>Copyright © 2021 Peregrine Automobile. All Rights Reserved.</p>
+		</div>
+	</div>
+</body>
+</html>
